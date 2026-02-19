@@ -483,3 +483,134 @@ body {
         font-size: 2rem;
     }
 }
+/* Profile Banner - Nueva franja horizontal */
+.profile-banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 4rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
+.banner-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.profile-banner:hover .banner-bg {
+    transform: scale(1.05);
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        rgba(0, 255, 255, 0.2) 0%, 
+        rgba(255, 0, 255, 0.2) 50%,
+        rgba(0, 255, 255, 0.2) 100%);
+    mix-blend-mode: overlay;
+}
+
+.profile-image-container {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+    animation: profileGlow 3s infinite ease-in-out;
+}
+
+@keyframes profileGlow {
+    0%, 100% { box-shadow: 0 0 30px rgba(0, 255, 255, 0.5); }
+    50% { box-shadow: 0 0 50px rgba(255, 0, 255, 0.5); }
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--darker-bg);
+}
+
+.profile-name {
+    text-align: center;
+    background: rgba(10, 14, 39, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.profile-name h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.profile-name p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Ajustar el about-content para la nueva estructura */
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-text {
+    margin-top: 80px; /* Espacio para la foto superpuesta */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-banner {
+        height: 250px;
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .profile-name h3 {
+        font-size: 1.2rem;
+    }
+    
+    .profile-name p {
+        font-size: 0.8rem;
+    }
+    
+    .about-text {
+        margin-top: 70px;
+    }
+}

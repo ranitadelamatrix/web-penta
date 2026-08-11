@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Innovación 4.0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Gaston Innovacion</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Sitio</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="admin-panel">
+        <div class="container">
+            <h2 class="section-title">Panel de Administración</h2>
+            <div class="admin-content">
+                <p>Desde aquí puedes editar títulos, descripciones y cargar imágenes para el sitio. Los cambios se guardan en tu navegador y se aplican en la página principal.</p>
+                <form id="admin-form" class="admin-form">
+                    <div class="admin-group">
+                        <label for="heroTitle">Título principal</label>
+                        <input id="heroTitle" name="heroTitle" type="text" placeholder="BIENVENIDO AL FUTURO">
+                    </div>
+                    <div class="admin-group">
+                        <label for="heroSubtitle">Subtítulo</label>
+                        <input id="heroSubtitle" name="heroSubtitle" type="text" placeholder="Técnico Superior en Innovación 4.0">
+                    </div>
+                    <div class="admin-group">
+                        <label for="heroDescription">Descripción del inicio</label>
+                        <textarea id="heroDescription" name="heroDescription" rows="3" placeholder="Transformamos datos..."></textarea>
+                    </div>
+                    <div class="admin-group">
+                        <label for="servicesSectionTitle">Título sección Servicios</label>
+                        <input id="servicesSectionTitle" name="servicesSectionTitle" type="text" placeholder="Tus necesidades">
+                    </div>
+                    <div class="admin-group">
+                        <label for="service1Title">Servicio 1 - título</label>
+                        <input id="service1Title" name="service1Title" type="text" placeholder="Análisis de Datos">
+                    </div>
+                    <div class="admin-group">
+                        <label for="service1Description">Servicio 1 - descripción</label>
+                        <textarea id="service1Description" name="service1Description" rows="2" placeholder="Convertimos tus datos..."></textarea>
+                    </div>
+                    <div class="admin-group">
+                        <label for="service2Title">Servicio 2 - título</label>
+                        <input id="service2Title" name="service2Title" type="text" placeholder="Ciberseguridad">
+                    </div>
+                    <div class="admin-group">
+                        <label for="service2Description">Servicio 2 - descripción</label>
+                        <textarea id="service2Description" name="service2Description" rows="2" placeholder="Protección integral..."></textarea>
+                    </div>
+                    <div class="admin-group">
+                        <label for="service3Title">Servicio 3 - título</label>
+                        <input id="service3Title" name="service3Title" type="text" placeholder="Internet de las Cosas (IoT)">
+                    </div>
+                    <div class="admin-group">
+                        <label for="service3Description">Servicio 3 - descripción</label>
+                        <textarea id="service3Description" name="service3Description" rows="2" placeholder="Conecta tu negocio..."></textarea>
+                    </div>
+                    <div class="admin-group">
+                        <label for="service4Title">Servicio 4 - título</label>
+                        <input id="service4Title" name="service4Title" type="text" placeholder="Sistemas de Facturación ARCA">
+                    </div>
+                    <div class="admin-group">
+                        <label for="service4Description">Servicio 4 - descripción</label>
+                        <textarea id="service4Description" name="service4Description" rows="2" placeholder="Implementamos soluciones..."></textarea>
+                    </div>
+                    <div class="admin-group">
+                        <label for="service5Title">Servicio 5 - título</label>
+                        <input id="service5Title" name="service5Title" type="text" placeholder="Mantenimiento Web">
+                    </div>
+                    <div class="admin-group">
+                        <label for="service5Description">Servicio 5 - descripción</label>
+                        <textarea id="service5Description" name="service5Description" rows="2" placeholder="Tu sitio web siempre actualizado..."></textarea>
+                    </div>
+                    <div class="admin-group">
+                        <label for="aboutSectionTitle">Título sección Nuestro equipo</label>
+                        <input id="aboutSectionTitle" name="aboutSectionTitle" type="text" placeholder="Servicios">
+                    </div>
+                    <div class="admin-group">
+                        <label for="aboutHeadline">Encabezado del equipo</label>
+                        <input id="aboutHeadline" name="aboutHeadline" type="text" placeholder="Técnico Superior en Innovación 4.0">
+                    </div>
+                    <div class="admin-group">
+                        <label for="aboutPara1">Texto sobre el equipo 1</label>
+                        <textarea id="aboutPara1" name="aboutPara1" rows="2" placeholder="Especializado en tecnologías emergentes..."></textarea>
+                    </div>
+                    <div class="admin-group">
+                        <label for="aboutPara2">Texto sobre el equipo 2</label>
+                        <textarea id="aboutPara2" name="aboutPara2" rows="2" placeholder="Con experiencia en análisis de datos..."></textarea>
+                    </div>
+                    <div class="admin-group">
+                        <label for="teamName">Nombre del equipo</label>
+                        <input id="teamName" name="teamName" type="text" placeholder="Gastón">
+                    </div>
+                    <div class="admin-group">
+                        <label for="teamRole">Rol del equipo</label>
+                        <input id="teamRole" name="teamRole" type="text" placeholder="Técnico Superior en Innovación 4.0">
+                    </div>
+                    <div class="admin-group">
+                        <label for="contactSectionTitle">Título sección Contacto</label>
+                        <input id="contactSectionTitle" name="contactSectionTitle" type="text" placeholder="Contacto">
+                    </div>
+                    <div class="admin-group">
+                        <label for="contactHeadline">Encabezado de contacto</label>
+                        <input id="contactHeadline" name="contactHeadline" type="text" placeholder="¿Listo para innovar?">
+                    </div>
+                    <div class="admin-group">
+                        <label for="contactPara">Texto de contacto</label>
+                        <textarea id="contactPara" name="contactPara" rows="2" placeholder="Estoy aquí para ayudarte..."></textarea>
+                    </div>
+                    <div class="admin-group">
+                        <label for="contactEmail">Email de contacto</label>
+                        <input id="contactEmail" name="contactEmail" type="email" placeholder="contacto@innovacion40.com">
+                    </div>
+                    <div class="admin-group">
+                        <label for="contactPhone">Teléfono de contacto</label>
+                        <input id="contactPhone" name="contactPhone" type="text" placeholder="+54 3854172687">
+                    </div>
+                    <div class="admin-group">
+                        <label for="contactAddress">Dirección de contacto</label>
+                        <input id="contactAddress" name="contactAddress" type="text" placeholder="Villa Maria, Cordoba, Argentina">
+                    </div>
+                    <div class="admin-group">
+                        <label for="siteBackgroundColor">Color de fondo</label>
+                        <input id="siteBackgroundColor" name="siteBackgroundColor" type="color" value="#0a0e27">
+                    </div>
+                    <div class="admin-group">
+                        <label for="siteBackgroundImage">Imagen de fondo</label>
+                        <input id="siteBackgroundImage" name="siteBackgroundImage" type="file" accept="image/*">
+                    </div>
+                    <div class="admin-group">
+                        <label for="bannerImage">Imagen de banner</label>
+                        <input id="bannerImage" name="bannerImage" type="file" accept="image/*">
+                    </div>
+                    <div class="admin-group">
+                        <label for="profileImage">Imagen de perfil</label>
+                        <input id="profileImage" name="profileImage" type="file" accept="image/*">
+                    </div>
+                    <button type="submit" class="submit-button">Guardar cambios</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Innovación 4.0. Todos los derechos reservados.</p>
+            <p>Técnico Superior en Innovación 4.0 | Soluciones Tecnológicas Avanzadas</p>
+        </div>
+    </footer>
+
+    <script>
+        const adminForm = document.getElementById('admin-form');
+
+        function readImageFile(input, callback) {
+            const file = input.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = (event) => callback(event.target.result);
+            reader.readAsDataURL(file);
+        }
+
+        function loadAdminData() {
+            const fields = [
+                'heroTitle', 'heroSubtitle', 'heroDescription',
+                'servicesSectionTitle',
+                'service1Title', 'service1Description',
+                'service2Title', 'service2Description',
+                'service3Title', 'service3Description',
+                'service4Title', 'service4Description',
+                'service5Title', 'service5Description',
+                'aboutSectionTitle', 'aboutHeadline', 'aboutPara1', 'aboutPara2',
+                'teamName', 'teamRole',
+                'contactSectionTitle', 'contactHeadline', 'contactPara',
+                'contactEmail', 'contactPhone', 'contactAddress',
+                'siteBackgroundColor'
+            ];
+
+            fields.forEach(field => {
+                const saved = localStorage.getItem(field);
+                const input = document.getElementById(field);
+                if (saved && input) {
+                    input.value = saved;
+                }
+            });
+        }
+
+        adminForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const saveField = (id) => localStorage.setItem(id, document.getElementById(id).value);
+
+            [
+                'heroTitle', 'heroSubtitle', 'heroDescription',
+                'servicesSectionTitle',
+                'service1Title', 'service1Description',
+                'service2Title', 'service2Description',
+                'service3Title', 'service3Description',
+                'service4Title', 'service4Description',
+                'service5Title', 'service5Description',
+                'aboutSectionTitle', 'aboutHeadline', 'aboutPara1', 'aboutPara2',
+                'teamName', 'teamRole',
+                'contactSectionTitle', 'contactHeadline', 'contactPara',
+                'contactEmail', 'contactPhone', 'contactAddress',
+                'siteBackgroundColor'
+            ].forEach(saveField);
+
+            const bannerImageInput = document.getElementById('bannerImage');
+            const profileImageInput = document.getElementById('profileImage');
+            const bgImageInput = document.getElementById('siteBackgroundImage');
+
+            if (bannerImageInput.files.length > 0) {
+                readImageFile(bannerImageInput, (result) => {
+                    localStorage.setItem('bannerImage', result);
+                });
+            }
+            if (profileImageInput.files.length > 0) {
+                readImageFile(profileImageInput, (result) => {
+                    localStorage.setItem('profileImage', result);
+                });
+            }
+            if (bgImageInput.files.length > 0) {
+                readImageFile(bgImageInput, (result) => {
+                    localStorage.setItem('siteBackgroundImage', result);
+                });
+            }
+
+            alert('Cambios guardados. Visita la página principal para ver los cambios.');
+            adminForm.reset();
+            loadAdminData();
+        });
+
+        loadAdminData();
+    </script>
+</body>
+</html>

@@ -33,15 +33,16 @@ src="https://www.facebook.com/tr?id=4319599674986035&ev=PageView&noscript=1"
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#sobre-mi">Nuestro equipo</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <li><a href="admin.html">Admin</a></li>
             </ul>
         </div>
     </nav>
 
-    <section id="inicio" class="hero">
+    <section id="inicio" class="hero" data-section="hero">
         <div class="hero-content">
-            <h1 class="glitch" data-text="BIENVENIDO AL FUTURO">BIENVENIDO AL FUTURO</h1>
-            <p class="subtitle">Técnico Superior en Innovación 4.0</p>
-            <p class="hero-description">Transformamos datos en decisiones, protegemos tu infraestructura digital y conectamos tu negocio con el futuro</p>
+            <h1 id="heroTitle" class="glitch" data-text="BIENVENIDO AL FUTURO">BIENVENIDO AL FUTURO</h1>
+            <p id="heroSubtitle" class="subtitle">Técnico Superior en Innovación 4.0</p>
+            <p id="heroDescription" class="hero-description">Transformamos datos en decisiones, protegemos tu infraestructura digital y conectamos tu negocio con el futuro</p>
             <a href="#contacto" class="cta-button">Comenzar Ahora</a>
             <a href="https://wa.me/+5493854172687" 
    onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({'event': 'contacto_whatsapp'});" 
@@ -57,12 +58,12 @@ src="https://www.facebook.com/tr?id=4319599674986035&ev=PageView&noscript=1"
 
     <section id="servicios" class="services">
         <div class="container">
-            <h2 class="section-title">Tus necesidades</h2>
+            <h2 class="section-title" id="servicesSectionTitle">Tus necesidades</h2>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card service-1">
                     <div class="service-icon">📊</div>
-                    <h3>Análisis de Datos</h3>
-                    <p>Convertimos tus datos en información estratégica. Utilizamos técnicas avanzadas de análisis predictivo, visualización interactiva y machine learning para impulsar tu negocio.</p>
+                    <h3 id="service1Title">Análisis de Datos</h3>
+                    <p id="service1Description">Convertimos tus datos en información estratégica. Utilizamos técnicas avanzadas de análisis predictivo, visualización interactiva y machine learning para impulsar tu negocio.</p>
                     <ul class="service-features">
                         <li>Dashboards interactivos</li>
                         <li>Análisis predictivo</li>
@@ -71,10 +72,10 @@ src="https://www.facebook.com/tr?id=4319599674986035&ev=PageView&noscript=1"
                     </ul>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card service-2">
                     <div class="service-icon">🔒</div>
-                    <h3>Ciberseguridad</h3>
-                    <p>Protección integral de tu infraestructura digital. Auditorías, pentesting, y monitoreo continuo para mantener tu información segura.</p>
+                    <h3 id="service2Title">Ciberseguridad</h3>
+                    <p id="service2Description">Protección integral de tu infraestructura digital. Auditorías, pentesting, y monitoreo continuo para mantener tu información segura.</p>
                     <ul class="service-features">
                         <li>Auditorías de seguridad</li>
                         <li>Pentesting ético</li>
@@ -83,10 +84,10 @@ src="https://www.facebook.com/tr?id=4319599674986035&ev=PageView&noscript=1"
                     </ul>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card service-3">
                     <div class="service-icon">🌐</div>
-                    <h3>Internet de las Cosas (IoT)</h3>
-                    <p>Conecta tu negocio con dispositivos inteligentes. Desarrollo e implementación de soluciones IoT personalizadas para optimizar procesos.</p>
+                    <h3 id="service3Title">Internet de las Cosas (IoT)</h3>
+                    <p id="service3Description">Conecta tu negocio con dispositivos inteligentes. Desarrollo e implementación de soluciones IoT personalizadas para optimizar procesos.</p>
                     <ul class="service-features">
                         <li>Desarrollo de sensores</li>
                         <li>Integración de sistemas</li>
@@ -95,10 +96,22 @@ src="https://www.facebook.com/tr?id=4319599674986035&ev=PageView&noscript=1"
                     </ul>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card service-4 arca-service-card">
+                    <div class="service-icon">🧾</div>
+                    <h3 id="service4Title">Sistemas de Facturación ARCA</h3>
+                    <p id="service4Description">Implementamos soluciones de facturación con ARCA para comercios y PyMEs, con integración de clientes, exportación e importación en Excel, backup y soporte de lectora láser.</p>
+                    <ul class="service-features">
+                        <li>Importación y exportación en Excel</li>
+                        <li>Gestión de clientes y cuentas</li>
+                        <li>Backups automáticos y restauración</li>
+                        <li>Soporte para lectora láser</li>
+                    </ul>
+                </div>
+
+                <div class="service-card service-5">
                     <div class="service-icon">⚙️</div>
-                    <h3>Mantenimiento Web</h3>
-                    <p>Tu sitio web siempre actualizado, seguro y funcionando al 100%. Mantenimiento preventivo y correctivo para garantizar la mejor experiencia.</p>
+                    <h3 id="service5Title">Mantenimiento Web</h3>
+                    <p id="service5Description">Tu sitio web siempre actualizado, seguro y funcionando al 100%. Mantenimiento preventivo y correctivo para garantizar la mejor experiencia.</p>
                     <ul class="service-features">
                         <li>Actualizaciones de seguridad</li>
                         <li>Optimización de rendimiento</li>
@@ -112,7 +125,7 @@ src="https://www.facebook.com/tr?id=4319599674986035&ev=PageView&noscript=1"
 
     <section id="sobre-mi" class="about">
     <div class="container">
-        <h2 class="section-title">Servicios</h2>
+        <h2 class="section-title" id="aboutSectionTitle">Servicios</h2>
         <div class="about-content">
             <!-- NUEVA FRANJA HORIZONTAL CON FOTO -->
             <div class="profile-banner">
@@ -129,16 +142,16 @@ src="https://www.facebook.com/tr?id=4319599674986035&ev=PageView&noscript=1"
                         <img src="image/perfil.jpeg" alt="Gastón - Especialista en Innovación 4.0" class="profile-img">
                     </div>
                     <div class="profile-name">
-                        <h3>Gastón</h3>
-                        <p>Técnico Superior en Innovación 4.0</p>
+                        <h3 id="teamName">Gastón</h3>
+                        <p id="teamRole">Técnico Superior en Innovación 4.0</p>
                     </div>
                 </div>
             </div>
             
             <div class="about-text">
-                <h3>Técnico Superior en Innovación 4.0</h3>
-                <p>Especializado en tecnologías emergentes y transformación digital. Mi misión es ayudar a empresas y emprendedores a aprovechar el poder de la tecnología para crecer y competir en la era digital.</p>
-                <p>Con experiencia en análisis de datos, ciberseguridad, IoT y desarrollo web, ofrezco soluciones integrales adaptadas a las necesidades específicas de cada cliente.</p>
+                <h3 id="aboutHeadline">Técnico Superior en Innovación 4.0</h3>
+                <p id="aboutPara1">Especializado en tecnologías emergentes y transformación digital. Mi misión es ayudar a empresas y emprendedores a aprovechar el poder de la tecnología para crecer y competir en la era digital.</p>
+                <p id="aboutPara2">Con experiencia en análisis de datos, ciberseguridad, IoT y desarrollo web, ofrezco soluciones integrales adaptadas a las necesidades específicas de cada cliente.</p>
                 <div class="stats">
                     <div class="stat">
                         <div class="stat-number">100+</div>
@@ -160,23 +173,23 @@ src="https://www.facebook.com/tr?id=4319599674986035&ev=PageView&noscript=1"
 
     <section id="contacto" class="contact">
         <div class="container">
-            <h2 class="section-title">Contacto</h2>
+            <h2 class="section-title" id="contactSectionTitle">Contacto</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>¿Listo para innovar?</h3>
-                    <p>Estoy aquí para ayudarte a llevar tu negocio al siguiente nivel. Contáctame y comencemos a trabajar juntos.</p>
+                    <h3 id="contactHeadline">¿Listo para innovar?</h3>
+                    <p id="contactPara">Estoy aquí para ayudarte a llevar tu negocio al siguiente nivel. Contáctame y comencemos a trabajar juntos.</p>
                     <div class="contact-methods">
                         <div class="contact-method">
                             <span class="contact-icon">📧</span>
-                            <span>contacto@innovacion40.com</span>
+                            <span id="contactEmail">contacto@innovacion40.com</span>
                         </div>
                         <div class="contact-method">
                             <span class="contact-icon">📱</span>
-                            <span>+54 3854172687</span>
+                            <span id="contactPhone">+54 3854172687</span>
                         </div>
                         <div class="contact-method">
                             <span class="contact-icon">📍</span>
-                            <span>Villa Maria, Cordoba, Argentina</span>
+                            <span id="contactAddress">Villa Maria, Cordoba, Argentina</span>
                         </div>
                     </div>
                 </div>
@@ -189,6 +202,7 @@ src="https://www.facebook.com/tr?id=4319599674986035&ev=PageView&noscript=1"
                         <option value="datos">Análisis de Datos</option>
                         <option value="ciber">Ciberseguridad</option>
                         <option value="iot">IoT</option>
+                        <option value="facturacion">Facturación ARCA</option>
                         <option value="web">Mantenimiento Web</option>
                         <option value="otro">Otro</option>
                     </select>
@@ -223,6 +237,108 @@ src="https://www.facebook.com/tr?id=4319599674986035&ev=PageView&noscript=1"
             alert('Gracias por tu mensaje. Te contactaré pronto!');
             form.reset();
         });
+
+        function loadAdminData() {
+            const heroTitle = document.querySelector('.hero h1');
+            const heroSubtitle = document.querySelector('.hero .subtitle');
+            const heroDescription = document.querySelector('.hero-description');
+            const servicesSectionTitle = document.getElementById('servicesSectionTitle');
+            const service1Title = document.getElementById('service1Title');
+            const service1Description = document.getElementById('service1Description');
+            const service2Title = document.getElementById('service2Title');
+            const service2Description = document.getElementById('service2Description');
+            const service3Title = document.getElementById('service3Title');
+            const service3Description = document.getElementById('service3Description');
+            const service4Title = document.getElementById('service4Title');
+            const service4Description = document.getElementById('service4Description');
+            const service5Title = document.getElementById('service5Title');
+            const service5Description = document.getElementById('service5Description');
+            const aboutSectionTitle = document.getElementById('aboutSectionTitle');
+            const aboutHeadline = document.getElementById('aboutHeadline');
+            const aboutPara1 = document.getElementById('aboutPara1');
+            const aboutPara2 = document.getElementById('aboutPara2');
+            const teamName = document.getElementById('teamName');
+            const teamRole = document.getElementById('teamRole');
+            const contactSectionTitle = document.getElementById('contactSectionTitle');
+            const contactHeadline = document.getElementById('contactHeadline');
+            const contactPara = document.getElementById('contactPara');
+            const contactEmail = document.getElementById('contactEmail');
+            const contactPhone = document.getElementById('contactPhone');
+            const contactAddress = document.getElementById('contactAddress');
+            const bannerBg = document.querySelector('.banner-bg');
+            const profileImg = document.querySelector('.profile-img');
+
+            const savedHeroTitle = localStorage.getItem('heroTitle');
+            const savedHeroSubtitle = localStorage.getItem('heroSubtitle');
+            const savedHeroDescription = localStorage.getItem('heroDescription');
+            const savedServicesSectionTitle = localStorage.getItem('servicesSectionTitle');
+            const savedService1Title = localStorage.getItem('service1Title');
+            const savedService1Description = localStorage.getItem('service1Description');
+            const savedService2Title = localStorage.getItem('service2Title');
+            const savedService2Description = localStorage.getItem('service2Description');
+            const savedService3Title = localStorage.getItem('service3Title');
+            const savedService3Description = localStorage.getItem('service3Description');
+            const savedService4Title = localStorage.getItem('service4Title');
+            const savedService4Description = localStorage.getItem('service4Description');
+            const savedService5Title = localStorage.getItem('service5Title');
+            const savedService5Description = localStorage.getItem('service5Description');
+            const savedAboutSectionTitle = localStorage.getItem('aboutSectionTitle');
+            const savedAboutHeadline = localStorage.getItem('aboutHeadline');
+            const savedAboutPara1 = localStorage.getItem('aboutPara1');
+            const savedAboutPara2 = localStorage.getItem('aboutPara2');
+            const savedTeamName = localStorage.getItem('teamName');
+            const savedTeamRole = localStorage.getItem('teamRole');
+            const savedContactSectionTitle = localStorage.getItem('contactSectionTitle');
+            const savedContactHeadline = localStorage.getItem('contactHeadline');
+            const savedContactPara = localStorage.getItem('contactPara');
+            const savedContactEmail = localStorage.getItem('contactEmail');
+            const savedContactPhone = localStorage.getItem('contactPhone');
+            const savedContactAddress = localStorage.getItem('contactAddress');
+            const savedBannerImage = localStorage.getItem('bannerImage');
+            const savedProfileImage = localStorage.getItem('profileImage');
+            const savedBackgroundColor = localStorage.getItem('siteBackgroundColor');
+            const savedBackgroundImage = localStorage.getItem('siteBackgroundImage');
+
+            if (savedHeroTitle) heroTitle.textContent = savedHeroTitle;
+            if (savedHeroSubtitle) heroSubtitle.textContent = savedHeroSubtitle;
+            if (savedHeroDescription) heroDescription.textContent = savedHeroDescription;
+            if (savedServicesSectionTitle) servicesSectionTitle.textContent = savedServicesSectionTitle;
+            if (savedService1Title) service1Title.textContent = savedService1Title;
+            if (savedService1Description) service1Description.textContent = savedService1Description;
+            if (savedService2Title) service2Title.textContent = savedService2Title;
+            if (savedService2Description) service2Description.textContent = savedService2Description;
+            if (savedService3Title) service3Title.textContent = savedService3Title;
+            if (savedService3Description) service3Description.textContent = savedService3Description;
+            if (savedService4Title) service4Title.textContent = savedService4Title;
+            if (savedService4Description) service4Description.textContent = savedService4Description;
+            if (savedService5Title) service5Title.textContent = savedService5Title;
+            if (savedService5Description) service5Description.textContent = savedService5Description;
+            if (savedAboutSectionTitle) aboutSectionTitle.textContent = savedAboutSectionTitle;
+            if (savedAboutHeadline) aboutHeadline.textContent = savedAboutHeadline;
+            if (savedAboutPara1) aboutPara1.textContent = savedAboutPara1;
+            if (savedAboutPara2) aboutPara2.textContent = savedAboutPara2;
+            if (savedTeamName) teamName.textContent = savedTeamName;
+            if (savedTeamRole) teamRole.textContent = savedTeamRole;
+            if (savedContactSectionTitle) contactSectionTitle.textContent = savedContactSectionTitle;
+            if (savedContactHeadline) contactHeadline.textContent = savedContactHeadline;
+            if (savedContactPara) contactPara.textContent = savedContactPara;
+            if (savedContactEmail) contactEmail.textContent = savedContactEmail;
+            if (savedContactPhone) contactPhone.textContent = savedContactPhone;
+            if (savedContactAddress) contactAddress.textContent = savedContactAddress;
+            if (savedBannerImage) bannerBg.src = savedBannerImage;
+            if (savedProfileImage) profileImg.src = savedProfileImage;
+            if (savedBackgroundImage) {
+                document.body.style.backgroundImage = `url(${savedBackgroundImage})`;
+                document.body.style.backgroundSize = 'cover';
+                document.body.style.backgroundPosition = 'center';
+                document.body.style.backgroundRepeat = 'no-repeat';
+            } else if (savedBackgroundColor) {
+                document.body.style.backgroundColor = savedBackgroundColor;
+                document.body.style.backgroundImage = 'none';
+            }
+        }
+
+        loadAdminData();
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {

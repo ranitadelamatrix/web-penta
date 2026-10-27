@@ -17,9 +17,32 @@
         </div>
     </nav>
 
-    <section class="admin-panel">
+    <section id="admin-login-section" class="admin-login-section">
         <div class="container">
-            <h2 class="section-title">Panel de Administración</h2>
+            <div class="login-card">
+                <h2 class="section-title">Acceso al panel</h2>
+                <form id="admin-login-form" class="login-form">
+                    <div class="admin-group">
+                        <label for="adminUser">Usuario</label>
+                        <input id="adminUser" type="text" placeholder="Usuario" required>
+                    </div>
+                    <div class="admin-group">
+                        <label for="adminPassword">Contraseña</label>
+                        <input id="adminPassword" type="password" placeholder="Contraseña" required>
+                    </div>
+                    <button type="submit" class="submit-button">Ingresar</button>
+                    <p id="loginError" class="login-error"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="admin-panel-section" class="admin-panel" style="display:none;">
+        <div class="container">
+            <div style="display:flex; justify-content:space-between; align-items:center; gap:1rem; margin-bottom:1rem; flex-wrap:wrap;">
+                <h2 class="section-title" style="margin-bottom:0;">Panel de Administración</h2>
+                <button type="button" id="logout-admin" class="submit-button" style="max-width:180px; background: linear-gradient(135deg, #ff6b6b, #ff2d55); color: white;">Cerrar sesión</button>
+            </div>
             <div class="admin-content">
                 <p>Desde aquí puedes editar títulos, descripciones y cargar imágenes para el sitio. Los cambios se guardan en tu navegador y se aplican en la página principal.</p>
                 <form id="admin-form" class="admin-form">
@@ -158,6 +181,31 @@
 
     <script>
         const adminForm = document.getElementById('admin-form');
+        const adminLoginForm = document.getElementById('admin-login-form');
+        const adminLoginSection = document.getElementById('admin-login-section');
+        const adminPanelSection = document.getElementById('admin-panel-section');
+        const loginError = document.getElementById('loginError');
+
+        const validUser = {
+            username: 'gastechnoran',
+            password: 'technorangas'
+        };
+
+        function showAdminPanel() {
+            adminLoginSection.style.display = 'none';
+            adminPanelSection.style.display = 'block';
+            sessionStorage.setItem('adminAuth', 'true');
+        }
+
+        function showLogin() {
+            adminLoginSection.style.display = 'block';
+            adminPanelSection.style.display = 'none';
+            sessionStorage.removeItem('adminAuth');
+        }
+
+        function isLoggedIn() {
+            return sessionStorage.getItem('adminAuth') === 'true';
+        }
 
         function readImageFile(input, callback) {
             const file = input.files[0];
@@ -191,6 +239,29 @@
                 }
             });
         }
+
+        adminLoginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById('adminUser').value.trim();
+            const password = document.getElementById('adminPassword').value.trim();
+
+            if (username === validUser.username && password === validUser.password) {
+                loginError.textContent = '';
+                showAdminPanel();
+                loadAdminData();
+                return;
+            }
+
+            loginError.textContent = 'Usuario o contraseña incorrectos.';
+            loginError.style.color = '#ff6b6b';
+            adminLoginForm.reset();
+        });
+
+        document.getElementById('logout-admin').addEventListener('click', () => {
+            showLogin();
+            adminLoginForm.reset();
+        });
 
         adminForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -236,7 +307,12 @@
             loadAdminData();
         });
 
-        loadAdminData();
+        if (isLoggedIn()) {
+            showAdminPanel();
+            loadAdminData();
+        } else {
+            showLogin();
+        }
     </script>
 </body>
 </html>

@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Innovación 4.0 | Soluciones Tecnológicas Avanzadas</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
 </head>
 <!-- Meta Pixel Code -->
 <script>
@@ -32,8 +41,9 @@ src="https://www.facebook.com/tr?id=4319599674986035&ev=PageView&noscript=1"
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#sobre-mi">Nuestro equipo</a></li>
+                <li><a href="#soluciones">Soluciones</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href="admin.html">Admin</a></li>
+                <li class="admin-link-hidden"><a href="admin.html">Admin</a></li>
             </ul>
         </div>
     </nav>
@@ -44,12 +54,26 @@ src="https://www.facebook.com/tr?id=4319599674986035&ev=PageView&noscript=1"
             <p id="heroSubtitle" class="subtitle">Técnico Superior en Innovación 4.0</p>
             <p id="heroDescription" class="hero-description">Transformamos datos en decisiones, protegemos tu infraestructura digital y conectamos tu negocio con el futuro</p>
             <a href="#contacto" class="cta-button">Comenzar Ahora</a>
-            <a href="https://wa.me/+5493854172687" 
+            <a href="https://wa.me/+5493854172687" class="cta-button secondary"
    onclick="window.dataLayer = window.dataLayer || []; window.dataLayer.push({'event': 'contacto_whatsapp'});" 
    >
    Contactar por WhatsApp
 </a>
         </div>
+        
+        <!-- Imágenes superpuestas descendentes -->
+        <div class="hero-images">
+            <div class="image-layer layer-1">
+                <img src="image/perfil.jpeg">
+            </div>
+            <div class="image-layer layer-2">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=400&h=300" alt="Innovación 2">
+            </div>
+            <div class="image-layer layer-3">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=400&h=300" alt="Innovación 3">
+            </div>
+        </div>
+
         <div class="hero-background">
             <div class="grid-overlay"></div>
             <div class="floating-particles"></div>
@@ -154,11 +178,11 @@ src="https://www.facebook.com/tr?id=4319599674986035&ev=PageView&noscript=1"
                 <p id="aboutPara2">Con experiencia en análisis de datos, ciberseguridad, IoT y desarrollo web, ofrezco soluciones integrales adaptadas a las necesidades específicas de cada cliente.</p>
                 <div class="stats">
                     <div class="stat">
-                        <div class="stat-number">100+</div>
+                        <div class="stat-number">50+</div>
                         <div class="stat-label">Proyectos Completados</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">50+</div>
+                        <div class="stat-number">20+</div>
                         <div class="stat-label">Clientes Satisfechos</div>
                     </div>
                     <div class="stat">
@@ -170,6 +194,117 @@ src="https://www.facebook.com/tr?id=4319599674986035&ev=PageView&noscript=1"
         </div>
     </div>
 </section>
+
+    <!-- Sección de Reseñas/Testimonios -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title">Lo que Dicen Nuestros Clientes</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Supiste captar la esencia y llevarlo a la pantalla"</p>
+                    <div class="review-author">
+                        <div class="author-avatar">👤</div>
+                        <source>
+                        <div>
+                            <h4><a href="https://vibrasalud.com.ar/">Vibra Salud</a></h4>
+                            <p>Directora Coworking</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Era justo lo que estaba necesitando, me ahorró mucho tiempo."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">👤</div>
+                        <div>
+                            <h4><a href="https://odvillarnovosofia.com.ar/">Sofia Villarnovo</a></h4>
+                            <p>Odontologa</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Necesitava un sistema y me leiste la mente"</p>
+                    <div class="review-author">
+                        <div class="author-avatar">👤</div>
+                        <div>
+                            <h4><a href="https://virginia.technoransuite.com.ar/">Virginia Rubiano</a></h4>
+                            <p>Nutricionista Deportiva</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Información Útil -->
+    <section class="useful-info">
+        <div class="container">
+            <h2 class="section-title">Información Útil</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">🚀</div>
+                    <h3>Metodología Ágil</h3>
+                    <p>Implementamos procesos ágiles y flexibles para adaptarnos rápidamente a tus necesidades y cambios del mercado.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🔐</div>
+                    <h3>Seguridad Garantizada</h3>
+                    <p>Cumplimos con normativas internacionales de seguridad y privacidad para proteger tus datos sensibles.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">📊</div>
+                    <h3>Análisis en Tiempo Real</h3>
+                    <p>Accede a métricas y análisis actualizados constantemente para tomar decisiones informadas.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">💰</div>
+                    <h3>ROI Garantizado</h3>
+                    <p>Invertir en nuestras soluciones genera retorno comprobable en la optimización de procesos.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🌍</div>
+                    <h3>Alcance Global</h3>
+                    <p>Tus soluciones escalan sin límites, conectando con usuarios y sistemas en cualquier parte del mundo.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">👥</div>
+                    <h3>Equipo de Expertos</h3>
+                    <p>Contamos con profesionales certificados con años de experiencia en tecnología e innovación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Soluciones -->
+    <section class="solutions" id="soluciones">
+        <div class="container">
+            <h2 class="section-title">Nuestras Soluciones</h2>
+            <div class="solutions-grid">
+                <div class="solution-item">
+                    <div class="solution-number">01</div>
+                    <h3>Transformación Digital Integral</h3>
+                    <p>Moderniza tu empresa con infraestructura digital de vanguardia, desde la nube hasta IoT.</p>
+                </div>
+                <div class="solution-item">
+                    <div class="solution-number">02</div>
+                    <h3>Análisis de Datos Avanzado</h3>
+                    <p>Convierte datos crudos en insights estratégicos que impulsen el crecimiento del negocio.</p>
+                </div>
+                <div class="solution-item">
+                    <div class="solution-number">03</div>
+                    <h3>Ciberseguridad Proactiva</h3>
+                    <p>Protege tu infraestructura con monitoreo, auditorías y respuesta a incidentes 24/7.</p>
+                </div>
+                <div class="solution-item">
+                    <div class="solution-number">04</div>
+                    <h3>Automatización Inteligente</h3>
+                    <p>Automatiza procesos complejos y reduce costos operacionales significativamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="contacto" class="contact">
         <div class="container">
@@ -354,6 +489,258 @@ src="https://www.facebook.com/tr?id=4319599674986035&ev=PageView&noscript=1"
             card.style.transform = 'translateY(20px)';
             card.style.transition = 'all 0.6s ease';
             observer.observe(card);
+        });
+
+        // ===== SISTEMA DE TRACKING DE COMPORTAMIENTO DE USUARIOS =====
+        
+        // Objeto para almacenar datos de sesión
+        const userBehaviorData = {
+            sessionId: generateSessionId(),
+            startTime: new Date(),
+            pagesVisited: [],
+            sectionsViewed: [],
+            clickedElements: [],
+            scrollDepth: 0,
+            timeOnPage: 0,
+            formInteractions: [],
+            devices: {
+                userAgent: navigator.userAgent,
+                language: navigator.language,
+                screenResolution: `${window.screen.width}x${window.screen.height}`,
+                timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+            }
+        };
+
+        // Generar ID único de sesión
+        function generateSessionId() {
+            return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        }
+
+        // ===== TRACKING DE SECCIONES VISITADAS =====
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const sectionId = entry.target.id;
+                    const sectionName = entry.target.querySelector('.section-title')?.textContent || sectionId;
+                    
+                    // Evitar duplicados
+                    if (!userBehaviorData.sectionsViewed.includes(sectionId)) {
+                        userBehaviorData.sectionsViewed.push(sectionId);
+                        
+                        // Enviar evento a Meta Pixel
+                        fbq('track', 'ViewContent', {
+                            content_name: `Sección: ${sectionName}`,
+                            content_type: 'section',
+                            section_id: sectionId
+                        });
+                        
+                        // Enviar evento a Google Analytics
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'view_section', {
+                                section_id: sectionId,
+                                section_name: sectionName
+                            });
+                        }
+                        
+                        console.log(`✓ Sección visitada: ${sectionName}`);
+                    }
+                }
+            });
+        }, { threshold: 0.25 });
+
+        // Observar todas las secciones principales
+        document.querySelectorAll('section[id]').forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // ===== TRACKING DE SCROLL DEPTH =====
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.clientHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrolled = window.scrollY;
+            
+            // Calcular porcentaje de scroll
+            const scrollPercent = Math.round((scrolled / (documentHeight - windowHeight)) * 100);
+            userBehaviorData.scrollDepth = Math.max(userBehaviorData.scrollDepth, scrollPercent);
+            
+            // Enviar evento cada 25% de scroll
+            if (scrollPercent > 0 && scrollPercent % 25 === 0 && scrollPercent !== userBehaviorData.lastScrollPercent) {
+                userBehaviorData.lastScrollPercent = scrollPercent;
+                
+                fbq('track', 'CustomEvent', {
+                    event_name: `scroll_${scrollPercent}%`,
+                    scroll_depth: scrollPercent
+                });
+                
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'scroll_depth', {
+                        scroll_percentage: scrollPercent
+                    });
+                }
+            }
+        }, { passive: true });
+
+        // ===== TRACKING DE CLICS EN BOTONES Y ENLACES =====
+        document.addEventListener('click', (e) => {
+            const target = e.target.closest('a, button');
+            if (target) {
+                const elementText = target.textContent?.trim();
+                const elementHref = target.href;
+                const elementClass = target.className;
+                
+                userBehaviorData.clickedElements.push({
+                    text: elementText,
+                    href: elementHref,
+                    class: elementClass,
+                    timestamp: new Date()
+                });
+                
+                // Eventos especiales para CTA buttons
+                if (target.classList.contains('cta-button')) {
+                    fbq('track', 'CustomEvent', {
+                        event_name: 'cta_click',
+                        cta_text: elementText
+                    });
+                    
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'cta_click', {
+                            cta_text: elementText
+                        });
+                    }
+                }
+                
+                // Evento para enlaces de WhatsApp
+                if (elementHref?.includes('wa.me')) {
+                    fbq('track', 'Lead', {
+                        content_name: 'WhatsApp Contact'
+                    });
+                    
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'whatsapp_contact', {
+                            contact_type: 'whatsapp'
+                        });
+                    }
+                }
+            }
+        });
+
+        // ===== TRACKING DE INTERACCCIONES CON FORMULARIO =====
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            const formInputs = contactForm.querySelectorAll('input, textarea, select');
+            
+            formInputs.forEach(input => {
+                // Track de enfoque en inputs
+                input.addEventListener('focus', () => {
+                    const fieldName = input.placeholder || input.name;
+                    userBehaviorData.formInteractions.push({
+                        field: fieldName,
+                        action: 'focus',
+                        timestamp: new Date()
+                    });
+                });
+                
+                // Track de cambios
+                input.addEventListener('change', () => {
+                    const fieldName = input.placeholder || input.name;
+                    userBehaviorData.formInteractions.push({
+                        field: fieldName,
+                        action: 'change',
+                        timestamp: new Date()
+                    });
+                });
+            });
+            
+            // Track de envío de formulario
+            contactForm.addEventListener('submit', (e) => {
+                fbq('track', 'Lead', {
+                    content_name: 'Formulario de Contacto',
+                    content_type: 'lead_form'
+                });
+                
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'form_submit', {
+                        form_name: 'contact_form',
+                        form_fields: userBehaviorData.formInteractions.length
+                    });
+                }
+                
+                console.log('✓ Formulario enviado - Evento registrado');
+            });
+        }
+
+        // ===== TRACKING DE TIEMPO EN PÁGINA =====
+        setInterval(() => {
+            userBehaviorData.timeOnPage = Math.round((new Date() - userBehaviorData.startTime) / 1000);
+            
+            // Enviar señal de sesión activa cada 30 segundos
+            if (userBehaviorData.timeOnPage % 30 === 0) {
+                fbq('track', 'CustomEvent', {
+                    event_name: 'session_active',
+                    time_on_page: userBehaviorData.timeOnPage,
+                    scroll_depth: userBehaviorData.scrollDepth
+                });
+            }
+        }, 1000);
+
+        // ===== TRACKING DE CAMBIOS DE PESTAÑA =====
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                fbq('track', 'CustomEvent', {
+                    event_name: 'page_hidden',
+                    time_on_page: userBehaviorData.timeOnPage
+                });
+            } else {
+                fbq('track', 'CustomEvent', {
+                    event_name: 'page_visible'
+                });
+            }
+        });
+
+        // ===== TRACKING DE SALIDA DE PÁGINA =====
+        window.addEventListener('beforeunload', () => {
+            // Enviar datos finales de sesión
+            fbq('track', 'CustomEvent', {
+                event_name: 'page_exit',
+                time_on_page: userBehaviorData.timeOnPage,
+                scroll_depth: userBehaviorData.scrollDepth,
+                sections_viewed: userBehaviorData.sectionsViewed.length,
+                total_clicks: userBehaviorData.clickedElements.length
+            });
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'page_exit', {
+                    time_on_page: userBehaviorData.timeOnPage,
+                    scroll_depth: userBehaviorData.scrollDepth,
+                    sections_viewed: userBehaviorData.sectionsViewed.length
+                });
+            }
+            
+            // Guardar datos en localStorage para análisis posterior
+            const sessionData = {
+                ...userBehaviorData,
+                endTime: new Date()
+            };
+            const existingSessions = JSON.parse(localStorage.getItem('userSessions') || '[]');
+            existingSessions.push(sessionData);
+            localStorage.setItem('userSessions', JSON.stringify(existingSessions.slice(-10))); // Guardar últimas 10 sesiones
+        });
+
+        // ===== TRACKING DE ORIENTACIÓN Y CAMBIOS DE DISPOSITIVO =====
+        window.addEventListener('orientationchange', () => {
+            fbq('track', 'CustomEvent', {
+                event_name: 'orientation_change',
+                orientation: window.orientation
+            });
+        });
+
+        // ===== INICIAR SESIÓN =====
+        console.log('✓ Sistema de tracking de usuarios iniciado');
+        console.log('ID de Sesión:', userBehaviorData.sessionId);
+        fbq('track', 'CustomEvent', {
+            event_name: 'session_start',
+            session_id: userBehaviorData.sessionId,
+            device: userBehaviorData.devices.screenResolution
         });
     </script>
 </body>

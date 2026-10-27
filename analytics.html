@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics | Innovación 4.0</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .analytics-container {
+            background: var(--darker-bg);
+            color: var(--text-light);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+        
+        .analytics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .analytics-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 1rem 0;
+        }
+        
+        .metric-label {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .sessions-list {
+            max-height: 400px;
+            overflow-y: auto;
+            margin-top: 2rem;
+        }
+        
+        .session-item {
+            background: rgba(0, 255, 255, 0.05);
+            padding: 1rem;
+            border-left: 3px solid var(--primary-color);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+        
+        .session-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .session-detail {
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            margin: 0.3rem 0;
+        }
+        
+        .chart-container {
+            background: rgba(0, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+        }
+        
+        .export-button {
+            background: var(--gradient-1);
+            color: var(--darker-bg);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 1rem 0.5rem 1rem 0;
+            transition: all 0.3s;
+        }
+        
+        .export-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 255, 255, 0.3);
+        }
+        
+        .clear-button {
+            background: rgba(255, 100, 100, 0.2);
+            color: #ff6464;
+            padding: 1rem 2rem;
+            border: 1px solid #ff6464;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 1rem 0.5rem 1rem 0;
+            transition: all 0.3s;
+        }
+        
+        .clear-button:hover {
+            background: rgba(255, 100, 100, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Gaston Innovacion</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Sitio</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="analytics.html" style="color: var(--primary-color);">Analytics</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section style="padding: 6rem 0;">
+        <div class="container">
+            <h1 style="font-size: 3rem; color: var(--primary-color); margin-bottom: 2rem;">📊 Panel de Analytics</h1>
+            <p style="color: var(--text-dim); font-size: 1.1rem; margin-bottom: 2rem;">Datos recopilados sobre el comportamiento de usuarios en el sitio web</p>
+
+            <div class="analytics-container">
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <div class="metric-label">Sesiones Registradas</div>
+                        <div class="metric-value" id="totalSessions">0</div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="metric-label">Secciones Promedio Visitadas</div>
+                        <div class="metric-value" id="avgSections">0</div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="metric-label">Tiempo Promedio en Página</div>
+                        <div class="metric-value" id="avgTime">0s</div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="metric-label">Clics Totales Registrados</div>
+                        <div class="metric-value" id="totalClicks">0</div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="metric-label">Scroll Depth Promedio</div>
+                        <div class="metric-value" id="avgScroll">0%</div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="metric-label">Interacciones de Formulario</div>
+                        <div class="metric-value" id="formInteractions">0</div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <h2 style="color: var(--primary-color); margin-bottom: 1rem;">🔧 Acciones</h2>
+                    <button class="export-button" onclick="exportData()">📥 Descargar Datos (JSON)</button>
+                    <button class="export-button" onclick="exportCSV()">📊 Descargar CSV</button>
+                    <button class="clear-button" onclick="clearData()">🗑️ Limpiar Datos Locales</button>
+                </div>
+
+                <div class="chart-container">
+                    <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">📈 Últimas Sesiones Registradas</h3>
+                    <div class="sessions-list" id="sessionsList"></div>
+                </div>
+            </div>
+
+            <div style="background: rgba(0, 255, 200, 0.1); border: 1px solid var(--accent-color); border-radius: 10px; padding: 2rem; margin-top: 3rem;">
+                <h3 style="color: var(--accent-color); margin-bottom: 1rem;">ℹ️ Información sobre el Tracking</h3>
+                <p style="color: var(--text-dim); line-height: 1.8;">
+                    Este panel muestra datos recopilados localmente en tu navegador. Los datos se guardan en localStorage y se envían a:<br>
+                    <strong>1. Meta Pixel (Facebook):</strong> Eventos de usuario, vistas de página, clics en CTA<br>
+                    <strong>2. Google Analytics 4:</strong> Métricas de sesión, navegación, interacciones<br>
+                    <strong>Nota:</strong> Reemplaza <code>G-XXXXXXXXXX</code> en el HTML con tu ID de Google Analytics real.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Función para cargar y mostrar estadísticas
+        function loadAnalytics() {
+            const sessions = JSON.parse(localStorage.getItem('userSessions') || '[]');
+            
+            if (sessions.length === 0) {
+                document.getElementById('sessionsList').innerHTML = 
+                    '<p style="color: var(--text-dim);">No hay datos registrados aún. Visita el sitio web para recopilar datos.</p>';
+                return;
+            }
+
+            // Calcular estadísticas
+            const totalSessions = sessions.length;
+            const avgSections = Math.round(
+                sessions.reduce((acc, s) => acc + (s.sectionsViewed?.length || 0), 0) / totalSessions
+            );
+            const avgTime = Math.round(
+                sessions.reduce((acc, s) => acc + (s.timeOnPage || 0), 0) / totalSessions
+            );
+            const totalClicks = sessions.reduce((acc, s) => acc + (s.clickedElements?.length || 0), 0);
+            const avgScroll = Math.round(
+                sessions.reduce((acc, s) => acc + (s.scrollDepth || 0), 0) / totalSessions
+            );
+            const formInteractions = sessions.reduce((acc, s) => acc + (s.formInteractions?.length || 0), 0);
+
+            // Actualizar UI
+            document.getElementById('totalSessions').textContent = totalSessions;
+            document.getElementById('avgSections').textContent = avgSections;
+            document.getElementById('avgTime').textContent = avgTime + 's';
+            document.getElementById('totalClicks').textContent = totalClicks;
+            document.getElementById('avgScroll').textContent = avgScroll + '%';
+            document.getElementById('formInteractions').textContent = formInteractions;
+
+            // Mostrar últimas sesiones
+            const sessionsList = document.getElementById('sessionsList');
+            sessionsList.innerHTML = sessions.slice().reverse().map((session, idx) => `
+                <div class="session-item">
+                    <h4>Sesión ${totalSessions - idx}</h4>
+                    <div class="session-detail">🆔 ID: ${session.sessionId}</div>
+                    <div class="session-detail">⏱️ Duración: ${session.timeOnPage || 0} segundos</div>
+                    <div class="session-detail">📍 Secciones visitadas: ${session.sectionsViewed?.length || 0}</div>
+                    <div class="session-detail">🖱️ Clics registrados: ${session.clickedElements?.length || 0}</div>
+                    <div class="session-detail">📜 Scroll: ${session.scrollDepth || 0}%</div>
+                    <div class="session-detail">📋 Interacciones de formulario: ${session.formInteractions?.length || 0}</div>
+                    <div class="session-detail">🕐 Inicio: ${new Date(session.startTime).toLocaleString('es-AR')}</div>
+                </div>
+            `).join('');
+        }
+
+        // Descargar datos como JSON
+        function exportData() {
+            const sessions = JSON.parse(localStorage.getItem('userSessions') || '[]');
+            const dataStr = JSON.stringify(sessions, null, 2);
+            const dataBlob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `analytics-${new Date().toISOString().slice(0, 10)}.json`;
+            link.click();
+            alert('✓ Datos descargados exitosamente');
+        }
+
+        // Descargar datos como CSV
+        function exportCSV() {
+            const sessions = JSON.parse(localStorage.getItem('userSessions') || '[]');
+            let csv = 'Session ID,Duración (s),Secciones Visitadas,Clics,Scroll Depth,Interacciones Formulario,Inicio Sesión\n';
+            
+            sessions.forEach(session => {
+                csv += `"${session.sessionId}",${session.timeOnPage || 0},${session.sectionsViewed?.length || 0},${session.clickedElements?.length || 0},${session.scrollDepth || 0}%,${session.formInteractions?.length || 0},"${new Date(session.startTime).toLocaleString('es-AR')}"\n`;
+            });
+
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', `analytics-${new Date().toISOString().slice(0, 10)}.csv`);
+            link.click();
+            alert('✓ Datos CSV descargados exitosamente');
+        }
+
+        // Limpiar datos
+        function clearData() {
+            if (confirm('¿Estás seguro de que deseas eliminar todos los datos analytics?')) {
+                localStorage.removeItem('userSessions');
+                loadAnalytics();
+                alert('✓ Datos eliminados correctamente');
+            }
+        }
+
+        // Cargar analytics al abrir la página
+        loadAnalytics();
+        setInterval(loadAnalytics, 5000); // Actualizar cada 5 segundos
+    </script>
+</body>
+</html>
